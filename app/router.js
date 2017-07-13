@@ -7,6 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('admin');
+  this.route('ask');
+  this.route('category');
+  this.route('question');
+  this.route('education');
+  this.route('banking');
+  this.route('living');
 });
 
 export default Router;

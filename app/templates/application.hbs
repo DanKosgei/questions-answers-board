@@ -1,5 +1,63 @@
 {{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
 {{!-- Feel free to remove this! --}}
 
 {{outlet}}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand title" href="/">Kenya Expat Q&A</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-left">
+        {{#link-to 'ask' class='btn btn-danger navbar-btn new-question'}}Ask a new Question{{/link-to}}
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin">Admin</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+      </div>
+      <div class="col-md-5 jumbotron-text">
+        <h1>Exchange Tips about living in Kenya</h1>
+        <h2>Get trustworthy advice and local insights from fellow members in our Kenya expat Q&A.</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="well categories-list">
+        <h2 class="title">Categories:</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><span class="badge"></span>{{#link-to 'banking'}}Banking{{/link-to}}</li>
+            <li class="list-group-item"><span class="badge"></span>{{#link-to 'rental'}}Rental{{/link-to}}</li>
+            <li class="list-group-item">{{#link-to 'education'}}Education{{/link-to}}</li>
+            <li class="list-group-item">{{#link-to 'living'}}Living{{/link-to}}</li>
+          </ul>
+      </div>
+        {{#link-to 'ask'}}<img src="https://images.unsplash.com/photo-1461950209984-1ce1f03a1be9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=fe7730e5485b9a33345316f93ceee0e6" class="img-responsive" alt="ask more questions" />{{/link-to}}
+    </div>
+
+      {{outlet}}
+
+  </div>
+</div>
