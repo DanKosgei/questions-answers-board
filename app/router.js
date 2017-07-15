@@ -14,6 +14,8 @@ Router.map(function() {
   this.route('education');
   this.route('banking');
   this.route('living');
+  this.route('edit');
+  this.route('rental');
 });
 
 export default Router;
